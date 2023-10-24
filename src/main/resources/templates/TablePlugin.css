@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+table {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #0052cc;
+  color: #fff;
+}
+tr:hover {
+  background-color: #ddd;
+}
+#groupButton {
+  background-color: #0052cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+#groupButton:hover {
+  background-color: #0747a6;
+}
+#dateFilterButton {
+  background-color: #0052cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+#dateFilterButton :hover {
+  background-color: #0747a6;
+}
+#clearFiltersButton {
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+#searchByAsignee {
+  background-color: #ffffff;
+  color: #0052cc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+label {
+  margin-top: 18px;
+  font-weight: bold;
+  color: #0052cc;
+}
+input[type="date"] {
+  padding: 8px;
+  margin: 10px;
+  margin-inline: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+input[type="date"]:focus {
+  outline: none;
+  border-color: #0052cc;
+}
+.dateRangeContainer {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+}
+.customGrouping {
+  background-color: #f2f2f2;
+  color: #0052cc;
+  padding: 0px;
+  padding-left: 10px;
+}
+#exportCSV {
+  background-color: #0052cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  height: 30px;
+}

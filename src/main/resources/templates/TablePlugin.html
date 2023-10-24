@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Example</title>
+  </head>
+  <body>
+    <div class="dateRangeContainer">
+      <label for="start">Start date:</label>
+      <input type="date" id="start" name="issue-start" />
+      <label for="end">End date:</label>
+      <input type="date" id="end" name="issue-end" />
+      <button id="dateFilterButton" onclick="filterIssuesByDateRange()">
+        Apply
+      </button>
+      <button id="clearFiltersButton" onclick="clearFilters()">x</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Created</th>
+          <th>Time Spent</th>
+          <th>Project Name</th>
+          <th>Comment</th>
+          <th>
+            <input style="width: 110px" type="name" id="asignee" />
+            <button id="searchByAsignee" onclick="searchByAsignee()">
+              Search
+            </button>
+          </th>
+          <th id="division1">--</th>
+          <th id="division2">--</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <button id="exportCSV" onclick="exportButton()">Export CSV</button>
+  </body>
+</html>
