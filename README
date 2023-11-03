@@ -1,3 +1,44 @@
+# Jira TimeTracker Plugin ⏳
+
+![Plugin Logo](placeholder-image.png)
+
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/your-plugin-repo)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+
+Welcome to the Jira TimeTracker Plugin! This plugin empowers you to efficiently track and manage employee working hours and timesheets within your Jira environment. 🕒
+
+## Features ✨
+
+- 📅 Easy time entry with an intuitive interface.
+- 📈 Visual representation of time data.
+- 🔄 Automated reminders for timesheet submissions.
+- 📊 Customizable reports and analytics.
+
+## Installation 📦
+
+1. Download the TimeTracker Plugin from [our website](https://github.com/your-plugin-repo).
+2. Upload and install it in your Jira instance.
+3. Configure plugin settings as needed.
+
+## Getting Started 🚀
+
+- Access the TimeTracker via the Jira menu.
+- Start logging your working hours and tasks.
+- Monitor progress and generate timesheet reports.
+- Stay organized and never miss a timesheet submission.
+
+## Contributing 🤝
+
+We welcome contributions from the community. If you have ideas for improvements or find any issues, please [create an issue](https://github.com/your-plugin-repo/issues) or submit a pull request.
+
+## License 📜
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Let's make time tracking easier and more efficient with the Jira TimeTracker Plugin! 🚀
+
+
+
 You have successfully created an Atlassian Plugin!
 
 Here are the SDK commands you'll use immediately:
