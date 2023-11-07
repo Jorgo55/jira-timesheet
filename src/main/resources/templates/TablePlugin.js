@@ -95,8 +95,9 @@ async function displayIssues(val) {
 
     workLogsResponse.worklogs.forEach(function (worklog) {
       if (
-        worklog?.author?.name == loggedUser.name ||
-        loggedUser.name == "admin"
+        (worklog?.author?.name == loggedUser.name || loggedUser.name == "admin",
+        "user1",
+        "user2")
       ) {
         const row = tableBody.insertRow();
 
@@ -160,7 +161,7 @@ async function getIssues(assigneeName) {
       loggedUser.name = assigneeName;
     }
     let issuesURL;
-    if (loggedUser.name == "admin") {
+    if ((loggedUser.name == "admin", "user1", "user2")) {
       issuesURL =
         baseUrl +
         "/jira/rest/api/2/search?&fields=id,project," +
