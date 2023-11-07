@@ -82,6 +82,9 @@ function getWorkLogs(key) {
     (response) => response.json()
   );
 }
+
+const adminUsernames = ["admin", "user1", "user2"];
+
 async function displayIssues(val) {
   const divison1 = document.getElementById("division1");
   const divison2 = document.getElementById("division2");
@@ -95,10 +98,11 @@ async function displayIssues(val) {
 
     workLogsResponse.worklogs.forEach(function (worklog) {
       if (
-        worklog?.author?.name == loggedUser.name ||
-        loggedUser.name == "admin"
+        (worklog?.author?.name == loggedUser.name ||
+          loggedUser.name == "luanjubica",
+        "naumand")
       ) {
-        const row = tableBody.insertRow();
+        const row = tableBody.insertRow(); 
 
         const keyCell = row.insertCell(0);
         keyCell.textContent = issue.key;
@@ -160,7 +164,8 @@ async function getIssues(assigneeName) {
       loggedUser.name = assigneeName;
     }
     let issuesURL;
-    if (loggedUser.name == "admin") {
+
+    if (adminUsernames.includes(loggedUser.name) && customFields.length !== 0) {
       issuesURL =
         baseUrl +
         "/jira/rest/api/2/search?&fields=id,project," +
