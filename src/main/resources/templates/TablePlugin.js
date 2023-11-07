@@ -78,7 +78,7 @@ function convertSecondsToJiraTime(seconds, timeUnit) {
 }
 
 function getWorkLogs(key) {
-  return fetch(baseUrl + "/jira/rest/api/2/issue/" + key + "/worklog").then(
+  return fetch(baseUrl + "/rest/api/2/issue/" + key + "/worklog").then(
     (response) => response.json()
   );
 }
@@ -151,11 +151,11 @@ async function displayIssues(val) {
 
 async function getIssues(assigneeName) {
   try {
-    const CFresponse = await fetch(baseUrl + "/jira/rest/api/2/field");
+    const CFresponse = await fetch(baseUrl + "/rest/api/2/field");
     const fields = await CFresponse.json();
     customFields = fields.filter((field) => field.custom);
     if (typeof assigneeName != "string") {
-      const userResp = await fetch(baseUrl + "/jira/rest/api/2/myself");
+      const userResp = await fetch(baseUrl + "/rest/api/2/myself");
       loggedUser = await userResp.json();
     } else {
       loggedUser.name = assigneeName;
@@ -164,14 +164,14 @@ async function getIssues(assigneeName) {
     if ((loggedUser.name == "admin", "user1", "user2")) {
       issuesURL =
         baseUrl +
-        "/jira/rest/api/2/search?&fields=id,project," +
+        "/rest/api/2/search?&fields=id,project," +
         customFields?.[0].id +
         "," +
         customFields?.[1].id;
     } else {
       issuesURL =
         baseUrl +
-        "/jira/rest/api/2/search?jql=worklogAuthor%20%3D%20" +
+        "/rest/api/2/search?jql=worklogAuthor%20%3D%20" +
         loggedUser.name;
     }
     const response = await fetch(issuesURL);
