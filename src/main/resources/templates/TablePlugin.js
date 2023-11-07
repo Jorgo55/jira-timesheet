@@ -99,8 +99,8 @@ async function displayIssues(val) {
     workLogsResponse.worklogs.forEach(function (worklog) {
       if (
         (worklog?.author?.name == loggedUser.name ||
-          loggedUser.name == "luanjubica",
-        "naumand")
+          loggedUser.name == "admin",
+        "user1")
       ) {
         const row = tableBody.insertRow(); 
 
